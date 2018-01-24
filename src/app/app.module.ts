@@ -8,15 +8,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeroesModule } from './heroes/heroes.module';
 import { CrisisCenterModule } from './crisis-center/crisis-center.module';
 import { AdminModule } from './admin/admin.module';
+import { LoginRoutingModule } from './login/login-routing.module';
 
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
-    ComposeMessageComponent
+    ComposeMessageComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +28,7 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
     HeroesModule,
     CrisisCenterModule,
     AdminModule,
+    LoginRoutingModule,
     AppRoutingModule
   ],
   providers: [],
