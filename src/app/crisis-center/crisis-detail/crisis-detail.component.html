@@ -1,0 +1,16 @@
+<div *ngIf="crisis$ | async as crisis">
+	<h2>
+		{{ crisis.name | uppercase }} Details
+	</h2>
+	<div>
+		<span>id: </span>{{ crisis.id }}
+	</div>
+	<div>
+		<label for="name">
+			Name:
+			<input [(ngModel)]="crisis.name" id="name" type="text" placeholder="Name">
+		</label>
+	</div>
+	<button (click)="gotoCrises(crisis)">Back</button>
+</div>
+<!-- <button (click)="save()">Save</button> -->
