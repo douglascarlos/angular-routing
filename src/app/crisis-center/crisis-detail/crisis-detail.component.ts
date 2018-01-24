@@ -31,7 +31,6 @@ export class CrisisDetailComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    console.log('aquiii');
     this.crisis$ = this.route.paramMap.switchMap(
       (parameters: ParamMap) => this.crisisService.getCrisis(parameters.get('id'))
     );

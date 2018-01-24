@@ -1,12 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-// import { ComposeMessageComponent } from './compose-message.component';
+import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const appRoutes: Routes = [
-    { path: '',   redirectTo: '/heroes', pathMatch: 'full' },
-    { path: '**', component: NotFoundComponent }
+    { 
+      path: '',   
+      redirectTo: '/heroes', pathMatch: 'full' 
+    },
+    { 
+      path: '**', 
+      component: NotFoundComponent 
+    },
+    {
+      path: 'compose',
+      component: ComposeMessageComponent,
+      outlet: 'popup'
+    },
   ];;
 
 @NgModule({

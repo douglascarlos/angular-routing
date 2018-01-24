@@ -9,11 +9,13 @@ import { HeroesModule } from './heroes/heroes.module';
 import { CrisisCenterModule } from './crisis-center/crisis-center.module';
 
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ComposeMessageComponent } from './compose-message/compose-message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ComposeMessageComponent
   ],
   imports: [
     BrowserModule,
