@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeroesModule } from './heroes/heroes.module';
 import { CrisisCenterModule } from './crisis-center/crisis-center.module';
+import { AdminModule } from './admin/admin.module';
 
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
@@ -23,6 +24,7 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
     BrowserAnimationsModule,
     HeroesModule,
     CrisisCenterModule,
+    AdminModule,
     AppRoutingModule
   ],
   providers: [],
