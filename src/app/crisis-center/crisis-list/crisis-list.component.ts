@@ -1,6 +1,6 @@
+import 'rxjs/add/operator/switchMap';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import 'rxjs/add/operator/switchMap';
 import { Observable } from 'rxjs/Observable';
 
 import { Crisis } from '../crisis';
@@ -19,19 +19,15 @@ export class CrisisListComponent implements OnInit {
   selectedId: number;
 
   constructor(
-    private crisisService: CrisisService,
+    private service: CrisisService,
     private route: ActivatedRoute
-  ) { }
+  ) {}
 
-  ngOnInit(): void {
-    this.getCrisises();
-  }
-
-  getCrisises(): void {
+  ngOnInit() {
     this.crises$ = this.route.paramMap
       .switchMap((params: ParamMap) => {
         this.selectedId = +params.get('id');
-        return this.crisisService.getCrises();
+        return this.service.getCrises();
       });
   }
 

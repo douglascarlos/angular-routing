@@ -14,6 +14,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import { LoginComponent } from './login/login.component';
 
+import { DialogService } from './dialog.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,9 @@ import { LoginComponent } from './login/login.component';
     LoginRoutingModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    DialogService
+  ],
   bootstrap: [
     AppComponent
   ]
