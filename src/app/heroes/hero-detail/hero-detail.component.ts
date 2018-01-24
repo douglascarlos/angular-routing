@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostBinding } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 import { Observable } from 'rxjs/Observable';
@@ -6,13 +6,21 @@ import { Observable } from 'rxjs/Observable';
 import { Hero } from '../hero';
 import { Route } from '@angular/router/src/config';
 import { HeroService } from '../hero.service';
+import { slideInDownAnimation } from '../../animation';
 
 @Component({
   selector: 'hero-detail',
   templateUrl: './hero-detail.component.html',
-  styleUrls: ['./hero-detail.component.css']
+  styleUrls: ['./hero-detail.component.css'],
+  animations: [
+    slideInDownAnimation
+  ]
 })
 export class HeroDetailComponent implements OnInit {
+
+  @HostBinding('@routeAnimation') routeAnimation = true;
+  @HostBinding('style.display')   display = 'block';
+  @HostBinding('style.position')  position = 'absolute';
 
   hero$: Observable<Hero>;
 
