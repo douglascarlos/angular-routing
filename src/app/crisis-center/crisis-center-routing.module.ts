@@ -8,30 +8,34 @@ import { CrisisCenterHomeComponent } from './crisis-center-home.component';
 
 const crisisCenterRoutes: Routes = [
     {
-        path: 'crisis-center',
-        component: CrisisCenterComponent,
-        children: [
-            {
-                path: '',
-                component: CrisisListComponent,
-                children: [
-                    {
-                        path: ':id',
-                        component: CrisisDetailComponent
-                    },
-                    {
-                        path: '',
-                        component: CrisisCenterHomeComponent
-                    }
-                ]
-            }
-        ]
+      path: 'crisis-center',
+      component: CrisisCenterComponent,
+      children: [
+        {
+            path: '',
+            component: CrisisListComponent,
+            children: [
+                // {
+                //     path: ':id',
+                //     component: CrisisDetailComponent
+                // },
+                {
+                    path: '',
+                    component: CrisisCenterHomeComponent
+                }
+            ]
+        },
+        {
+            path: ':id',
+            component: CrisisDetailComponent
+        },
+      ]
     }
 ];
 
 @NgModule({
     imports: [
-      RouterModule.forChild(crisisCenterRoutes)
+        RouterModule.forChild(crisisCenterRoutes)
     ],
     exports: [
         RouterModule
