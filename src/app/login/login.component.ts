@@ -35,7 +35,7 @@ export class LoginComponent {
           queryParamsHandling: 'preserve',
           preserveFragment: true
         };
-
+        
         // Redirect the user
         this.router.navigate([redirect], navigationExtras);
       }

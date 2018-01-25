@@ -17,7 +17,7 @@ const crisisCenterRoutes: Routes = [
         pathMatch: 'full'
     },
     {
-        path: 'crisis-center',
+        path: '',
         component: CrisisCenterComponent,
         children: [
             {
